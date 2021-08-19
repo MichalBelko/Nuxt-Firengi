@@ -33,10 +33,7 @@ export default {
   font-size: 1.15rem;
   margin-top: 0.4rem;
 }
-.header:hover {
-  color: #000;
-  text-decoration: none;
-}
+
 .snippet {
   color: grey;
 }

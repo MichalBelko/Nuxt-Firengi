@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style scoped>
+a:hover {
+  text-decoration: none;
+}
 .card-container {
   width: 24%;
   height: 12.5rem;

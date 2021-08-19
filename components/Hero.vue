@@ -14,7 +14,12 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style scoped>
@@ -24,11 +29,11 @@ export default {};
   display: flex;
   padding: 3rem 0;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 100vh;
 }
 .text-container {
   width: 50%;
-  margin-top: 4rem;
   line-height: 1.5;
 }
 button.button:active,
@@ -40,13 +45,14 @@ button.button:focus {
   font-weight: 900;
   font-size: 5rem;
   padding-block: 1rem;
+  margin-bottom: 2rem;
 }
 .snippet {
   color: #808080;
   font-size: 1.25rem;
 }
 .image {
-  width: 27.5rem;
+  max-width: 27.5rem;
   margin-top: 2rem;
 }
 .overlay {
@@ -58,17 +64,20 @@ button.button:focus {
 }
 .button {
   padding: 1rem 4rem;
-  border-radius: 100rem;
+  border-radius: 5rem;
   background-color: rgb(231, 81, 43);
   color: #ffffff;
   margin-inline: auto;
+  margin-top: 3rem;
   display: block;
   font-weight: 700;
   transition: 0.3s;
   letter-spacing: 1px;
+  font-size: 1rem;
+  transform: scale(1.2);
 }
 .button:hover {
-  transform: scale(1.03);
+  transform: scale(1.23);
 }
 @media (max-width: 500px) {
   .Hero {

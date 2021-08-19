@@ -28,4 +28,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+a:hover {
+  text-decoration: none;
+}
+</style>
