@@ -17,13 +17,17 @@ export default {
 </script>
 
 <style scoped>
+* {
+  text-align: center;
+}
 .card {
-  width: 31.5%;
+  width: 20rem;
   height: 25rem;
   border: none;
-  overflow: hidden;
+
   padding: 0;
   cursor: pointer;
+  margin: 0.5rem;
 }
 .image {
   height: 65%;
@@ -36,5 +40,10 @@ export default {
 
 .snippet {
   color: grey;
+}
+@media screen and (max-width: 350px) {
+  .snippet {
+    font-size: 0.8rem;
+  }
 }
 </style>

@@ -27,4 +27,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+h3 {
+  font-size: clamp(1.4rem, 0.6vw + 1.3rem, 1.8rem);
+}
+</style>

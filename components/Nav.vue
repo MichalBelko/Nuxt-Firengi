@@ -29,7 +29,7 @@ nav a {
   letter-spacing: 1px;
   margin-inline: 1rem;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 0.7vw + 0.7rem, 1.25rem);
 }
 nav a:hover {
   text-decoration: underline;
@@ -45,5 +45,25 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 330px) {
+  nav {
+    padding: 0;
+  }
+  .wrapper a:first-child {
+    flex-basis: 100%;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .wrapper a:not(:first-child) {
+    flex-basis: 50%;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+  }
+  nav a {
+    padding-block: 1rem;
+  }
 }
 </style>

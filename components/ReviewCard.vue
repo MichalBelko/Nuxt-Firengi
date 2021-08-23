@@ -22,18 +22,20 @@ export default {
 <style scoped>
 .review-card {
   margin-top: 1.5rem;
-  height: 4rem;
+  align-items: center;
   display: flex;
+  gap: 2rem;
 }
-.text-container {
-  margin-left: 2rem;
-}
+
 img {
-  width: 4rem;
-  height: 4rem;
   border-radius: 100%;
 }
 p {
   color: grey;
+  margin-bottom: 0;
+  font-size: clamp(0.8rem, 0.5vw + 0.7rem, 1.1rem);
+}
+.container {
+  padding-inline: 0 !important;
 }
 </style>

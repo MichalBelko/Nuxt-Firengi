@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav />
-    <div v-if="product" class="container py-5">
+    <div v-if="product" class="container py-2 px-0">
       <div class="hero-container">
         <img
           :src="require(`@/assets/images/${product.image}`)"
@@ -70,16 +70,19 @@ export default {
 <style scoped>
 .hero-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .image {
-  width: 59%;
-  height: 25rem;
+  width: 20rem;
 }
+.hero-container > * {
+  flex-basis: 50%;
+}
+
 .info-box {
-  width: 39%;
   background-color: rgba(207, 201, 201, 0.322);
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 0.5rem;
 }
 .whats-included-container {
@@ -94,7 +97,7 @@ export default {
   margin-top: 1.5rem;
 }
 h1 {
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 1vw + 1.2rem, 2rem);
 }
 h6 {
   font-size: 1.15rem;
@@ -107,10 +110,12 @@ p {
   color: rgba(0, 0, 0, 0.774);
   margin-top: 1rem;
 }
+h3 {
+  font-size: clamp(1.4rem, 0.6vw + 1.3rem, 1.8rem);
+}
 button {
-  width: 100%;
   border: none;
-  padding: 0.5rem;
+
   color: white;
   font-weight: 700;
   padding: 1rem 4rem;
@@ -119,6 +124,7 @@ button {
   color: white;
   font-weight: 700;
   transition: 0.5s;
+  display: inline-block;
 }
 .description-container {
   margin-top: 3rem;
@@ -126,5 +132,13 @@ button {
 }
 .padding {
   padding: 10rem 0;
+}
+@media screen and (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+  .hero-container > * {
+    flex-basis: 100%;
+  }
 }
 </style>

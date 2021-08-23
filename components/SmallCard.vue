@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/products/${card.id}`" class="card-container">
+  <NuxtLink :to="`/products/${card.id}`" class="card-container2">
     <img
       :src="require(`../assets/images/${card.image}`)"
       alt="card"
@@ -15,15 +15,18 @@ export default {
 </script>
 
 <style scoped>
+::selection {
+  color: white;
+  background-color: #212943;
+}
 a:hover {
   text-decoration: none;
 }
-.card-container {
-  width: 24%;
-  height: 12.5rem;
+.card-container2 {
+  width: 20rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin: 0.5rem;
   cursor: pointer;
 }
 .image {

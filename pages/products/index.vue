@@ -3,13 +3,13 @@
     <Nav />
     <div class="container">
       <LargeCardDisplay
-        v-for="cardInfo in largeCardInfo.slice(0, 1)"
-        :key="cardInfo.id"
+        v-for="(cardInfo, index) in largeCardInfo.slice(0, 1)"
+        :key="index"
         :cardsSection="cardInfo"
       />
       <SmallCardDisplay
-        v-for="cardInfo in smallCardInfo"
-        :key="cardInfo.id"
+        v-for="(cardInfo, index) in smallCardInfo"
+        :key="cardInfo.Id"
         :cardsSection="cardInfo"
       />
     </div>
@@ -29,6 +29,13 @@ export default {
 </script>
 
 <style>
+::selection {
+  color: white;
+  background-color: #212943;
+}
+img {
+  object-fit: cover;
+}
 a:hover {
   text-decoration: none;
 }

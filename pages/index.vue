@@ -3,13 +3,13 @@
     <Nav />
     <Hero />
     <LargeCardDisplay
-      v-for="cardInfo in largeCardInfo"
-      :key="cardInfo.id"
+      v-for="(cardInfo, index) in largeCardInfo"
+      :key="cardInfo.Id"
       :cardsSection="cardInfo"
     />
     <SmallCardDisplay
-      v-for="cardInfo in smallCardInfo"
-      :key="cardInfo.id"
+      v-for="(cardInfo, index) in smallCardInfo"
+      :key="index"
       :cardsSection="cardInfo"
     />
   </div>
@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style>
+::selection {
+  color: white;
+  background-color: #212943;
+}
 body {
   min-height: 100vh;
 }

@@ -28,13 +28,16 @@ export default {
   position: relative;
   display: flex;
   padding: 3rem 0;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  padding-block: 5rem;
+  flex-wrap: wrap-reverse;
+}
+.Hero > * {
+  width: 50%;
 }
 .text-container {
-  width: 50%;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 button.button:active,
 button.button:focus {
@@ -43,16 +46,17 @@ button.button:focus {
 }
 .header {
   font-weight: 900;
-  font-size: 5rem;
+  font-size: clamp(2rem, 4.8vw + 1.1rem, 5rem);
   padding-block: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .snippet {
   color: #808080;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.4vw + 0.9rem, 1.25rem);
 }
 .image {
-  max-width: 27.5rem;
+  max-width: 35%;
   margin-top: 2rem;
 }
 .overlay {
@@ -79,9 +83,18 @@ button.button:focus {
 .button:hover {
   transform: scale(1.23);
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 800px) {
+  .Hero > * {
+    flex-basis: 100%;
+  }
   .Hero {
-    height: 40vh;
+    padding: 0;
+  }
+  .text-container {
+    text-align: center;
+  }
+  .button {
+    padding: 1rem 2rem;
   }
 }
 </style>
