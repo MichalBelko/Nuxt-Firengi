@@ -27,6 +27,9 @@ export default {};
 </script>
 
 <style scoped>
+body {
+  overflow-y: hidden;
+}
 nav {
   visibility: hidden;
 }
@@ -44,6 +47,7 @@ nav {
 }
 html {
   height: 100%;
+  overflow-y: hidden;
 }
 
 .page {
@@ -53,7 +57,9 @@ html {
   margin: 0;
   background-attachment: fixed;
   overflow: hidden;
-  padding-block-end: 20vmin;
+  position: absolute;
+  inset: 0;
+  overflow-y: hidden;
 }
 
 .mars {
@@ -74,7 +80,7 @@ html {
   left: 0;
   right: 0;
   top: 16vmin;
-  width: 30vmin;
+  width: 15vmin;
 }
 @media (max-width: 480px) and (min-width: 320px) {
   .logo-404 {
@@ -94,7 +100,7 @@ html {
   font-weight: 600;
   text-align: center;
   font-size: 6vmin;
-  margin-top: 20vmin;
+  margin-top: 30vmin;
 }
 @media (max-width: 480px) and (min-width: 320px) {
   .title {
@@ -136,13 +142,8 @@ html {
   position: absolute;
   top: 18vmin;
   left: 10vmin;
-  height: 30vmin;
+  height: 20vmin;
   animation: floating 3s infinite ease-in-out;
-}
-@media (max-width: 480px) and (min-width: 320px) {
-  .astronaut {
-    top: 2vmin;
-  }
 }
 
 .spaceship {
@@ -154,6 +155,47 @@ html {
   .spaceship {
     width: 45vmin;
     bottom: 18vmin;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .logo-404 {
+    top: 45vmin;
+    width: 20vmin;
+  }
+  .title {
+    margin-top: 55vmin;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo-404 {
+    top: 55vmin;
+    width: 30vmin;
+  }
+  .title {
+    margin-top: 75vmin;
+  }
+  .subtitle {
+    font-size: 5vmin !important;
+  }
+  .astronaut {
+    top: 30vmin;
+    left: 2vmin;
+    height: 29vmin;
+  }
+}
+@media screen and (max-width: 300px) {
+  .logo-404 {
+    top: 45vmin;
+    width: 55vmin;
+  }
+  .astronaut {
+    top: 75vmin;
+    left: 60vmin;
+    height: 30vmin;
+  }
+  .title {
+    margin-top: 105vmin;
   }
 }
 </style>

@@ -8,9 +8,6 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
             asperiores corrupti totam maxime dolores quo sint officiis illum
-            cupiditate praesentium iste distinctio molestias consequuntur
-            voluptatum, esse consequatur ipsa tempora voluptatem ex porro? Quia
-            porro saepe placeat modi aut voluptate rerum.
           </p>
         </div>
         <vc-date-picker :value="null" color="indigo" is-dark is-range />
@@ -52,6 +49,9 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  text-align: center;
+}
 button {
   width: 100%;
   border: none;
@@ -66,7 +66,7 @@ button {
   transition: 0.5s;
 }
 .calendar-container {
-  margin: 0 auto;
+  margin: 0.5rem auto;
   display: flex;
   justify-content: space-between;
 }
@@ -75,5 +75,13 @@ p {
 }
 .text-container {
   padding: 0.5rem;
+}
+@media screen and (max-width: 500px) {
+  .calendar-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 </style>

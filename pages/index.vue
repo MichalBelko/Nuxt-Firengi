@@ -34,6 +34,13 @@ export default {
   color: white;
   background-color: #212943;
 }
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #212943;
+}
 body {
   min-height: 100vh;
 }
