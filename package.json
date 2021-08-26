@@ -2,7 +2,7 @@
   "name": "client",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://michalbelko.github.io/Nuxt-Firengii/",
+  "homepage": "https://michalbelko.github.io/Nuxt-Firengi/",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
